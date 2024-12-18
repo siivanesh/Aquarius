@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_REGISTRY = 'siivaneshswaminathan' // Replace with your Docker Hub username
+        DOCKER_REGISTRY = 'jothirajan1124' // Replace with your Docker Hub username
         IMAGE_NAME = 'jaisreeramaa'          // Replace with your image name
-        BRANCH = 'dev'                          // Branch to pull from
+        BRANCH = 'main'                          // Branch to pull from
         REPO_URL = 'https://github.com/siivanesh/Aquarius.git' // Replace with your GitHub repo URL
     }
 
