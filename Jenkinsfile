@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_REGISTRY = 'jothirajan1124' // Replace with your Docker Hub username
-        IMAGE_NAME = 'jaisreeramaa'          // Replace with your image name
+        IMAGE_NAME = 'jaisre'          // Replace with your image name
         BRANCH = 'main'                          // Branch to pull from
         REPO_URL = 'https://github.com/siivanesh/Aquarius.git' // Replace with your GitHub repo URL
     }
@@ -35,7 +35,7 @@ pipeline {
                 echo "Pushing Docker image to Docker Hub..."
                 script {
                     // Log in to Docker Hub and push the image
-                    withDockerRegistry([credentialsId: 'practice', url: '']) {
+                    withDockerRegistry([credentialsId: 'demo1', url: '']) {
                         sh "docker push ${DOCKER_REGISTRY}/${IMAGE_NAME}:latest"
                     }
                 }
