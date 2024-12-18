@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_REGISTRY = 'siivaneshswaminathan' // Replace with your Docker Hub username
-        IMAGE_NAME = 'jaisreeramaaaaaaa'          // Replace with your image name
+        IMAGE_NAME = 'jai'          // Replace with your image name
         BRANCH = 'main'                          // Branch to pull from
         REPO_URL = 'https://github.com/siivanesh/Aquarius.git' // Replace with your GitHub repo URL
     }
@@ -48,7 +48,7 @@ pipeline {
                 script {
                     // Run the Docker container
                     sh """
-                    docker run -d --name ${IMAGE_NAME} -p 2468:5173 ${DOCKER_REGISTRY}/${IMAGE_NAME}:latest
+                    docker run -d --name ${IMAGE_NAME} -p 4500:5173 ${DOCKER_REGISTRY}/${IMAGE_NAME}:latest
                     """
                 }
             }
