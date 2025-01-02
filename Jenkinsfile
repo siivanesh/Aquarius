@@ -15,7 +15,7 @@ pipeline {
                 checkout([
                     $class: 'GitSCM',
                     branches: [[name: "*/${BRANCH}"]],
-                    userRemoteConfigs: [[url: "${REPO_URL}", credentialsId: 'your-credentials-id']]
+                    userRemoteConfigs: [[url: "${REPO_URL}", credentialsId: 'git12']]
                 ])
             }
         }
@@ -35,7 +35,7 @@ pipeline {
                 echo "Pushing Docker image to Docker Hub..."
                 script {
                     // Log in to Docker Hub and push the image
-                    withDockerRegistry([credentialsId: 'git12', url: '']) {
+                    withDockerRegistry([credentialsId: 'doc12', url: '']) {
                         sh "docker push ${DOCKER_REGISTRY}/${IMAGE_NAME}:latest"
                     }
                 }
